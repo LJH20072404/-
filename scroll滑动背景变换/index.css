@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white; /* 让整体背景为白色 */
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 2rem;
+}
+.container h2 {
+  margin: 88px auto 89px;
+}
+.container ul {
+  background-color: white;
+  width: 100vw;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* 这里设置每个区域的背景 */
+.container[data-bg]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;/* 保持透明，背景由 body 提供 */
+  opacity: 0;
+  z-index: -1;
+}
+
+.container.visible[data-bg="1"]::before {
+  background-image: url("image/1.jpg");
+  opacity: 1;
+}
+
+.container.visible[data-bg="2"]::before {
+  background-image: url("image/2.jpg");
+  opacity: 1;
+}
+
+.container.visible[data-bg="3"]::before {
+  background-image: url("image/3.jpg");
+  opacity: 1;
+}
+
+.container.visible[data-bg="4"]::before {
+  background-image: url("image/4.jpg");
+  opacity: 1;
+}

@@ -1,0 +1,23 @@
+.swiper {
+    position: relative;
+    max-width: 1050px;
+    width: 100%;
+}
+.swiper-slide {
+    position: relative;
+    height: 720px;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    transition: initial 2.5s ease-in-out;
+}
+.swiper-wrapper::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0px 0px 30px 30px #fff;
+    content: "";
+}

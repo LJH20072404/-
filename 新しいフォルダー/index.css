@@ -1,0 +1,381 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+}
+header {
+    width: 100%;
+}
+/*加右上角按钮*/
+.menu-btn {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #FF2A2A;
+    transition: opacity 0.3s ease-in-out;
+}
+.menu-btn:hover {
+    opacity: 0.5;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 2px;/*调节横线宽度*/
+    width: 50px;/*调节横线长度*/
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 0.3s ease-in-out;/*变X的时间*/
+}
+.menu-btn span:before {
+    bottom: 14px;/*调节横线间距*/
+}
+.menu-btn span:after {
+    top: 14px;/*调节横线间距*/
+}
+/*按钮结束*/
+/**/
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform:rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+/*三横杠变X*/
+/*菜单*/
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #FF2A2A;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.logo-w {
+    max-width: 100px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.logo-w img {
+    width: 100%;
+}
+/**/
+/* 让 menu 居中 */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+    justify-content: flex-start; /* 垂直居中 */
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    transform: translateX(-5%);
+}
+/* 调整菜单项的间距 */
+.menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 15px 0; /* 增加间距，使其更美观 */
+}
+
+.menu ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    letter-spacing: 1.5px;
+}
+/* 让按钮也居中 */
+.menu button {
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff; /* 默认边框 */
+    text-decoration: none;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    font-weight: bold;
+}
+
+.menu button::before,
+.menu button::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+}
+
+/* 右侧边框的额外下划线 */
+.menu button::before {
+    width: 100%;
+    height: 1px; /* 下划线厚度 */
+    bottom: -5px; /* 控制下划线位置 */
+    left: 5px; /* 控制左对齐 */
+}
+
+/* 右下角额外边框 */
+.menu button::after {
+    width: 1px; /* 竖线宽度 */
+    height: 100%;
+    right: -5px; /* 右侧偏移 */
+    bottom: -5px; /* 控制位置 */
+}
+.menu button:hover {
+    background-color: white;
+    color: #FF2A2A;
+    transition: all 0.5s ease-in-out;
+}
+/**/
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 80;
+    background-color: #FF2A2A;
+    opacity: 0;  /* 初始透明 */
+    transform: none; /* 初始缩小 */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    pointer-events: none; /* 默认不可点击 */
+}
+#menu-btn-check:checked ~ .menu-content {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto; /* 允许点击 */
+}
+
+.logo-r {
+    max-width: 100px;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.first-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100vw;
+    align-items: center;
+    padding: 0 10vw;
+}
+/*first-container-swiper*/
+.swiper {
+    max-width: 70vw;
+    width: 100%;
+    position: relative;
+    margin: 0 !important;
+    flex: 2;
+    transform: translateX(29%);
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 3px;
+}
+/*swiper边缘虚化*/
+.swiper-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 10px 20px #ffffff;
+    pointer-events: none;
+}
+.FC-message p {
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 5px #ffffff;
+    color: #333;
+}
+.FC-message {
+    flex: 1;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 40vw;
+}
+.FC-btn {
+    background-color: #FF2A2A;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px #9A0413;
+    transition: all 0.5s ease-in-out;
+}
+.FC-btn button {
+    padding: 15px 127px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+.FC-btn button::after {
+    content: ">";
+    position: absolute;
+    right: 16px;
+}
+.FC-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+}
+/*second-container*/
+.second-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    margin-top: 120px;
+}
+.SC-top {
+    text-align: center;
+}
+.SC-bottom {
+    background-color: #FF2A2A;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.SC-top h2 {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.SC-message {
+    display: flex;
+    background-color: #ffffff;
+    gap: 30px;
+    padding: 70px 125px;
+}
+.left {
+    align-self: flex-start;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.right {
+    align-self: flex-end;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.SC-message h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FF2A2A;
+    letter-spacing: 3px;
+}
+.SC-message p {
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.left img {
+    max-width: 87px;
+}
+.right img {
+    max-width: 51px;
+}
+/*third-container*/
+.third-container {
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto;
+}
+.TC-top {
+    text-align: center;
+}
+.TC-top h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 3px;
+    color: #333;
+}
+.TC-photo-message {
+    display: flex;
+    justify-content: center;
+}
+.TC-photo {
+    text-align: center;
+}
+.TC-photo img {
+    max-width: 120px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+.TC-message {
+    display: flex;
+}
+.TC-message img {
+    max-width: 15px;
+    max-height: 30px;
+    position: relative;
+    top: 70px;
+}
+.inside-message {
+    background-color: #e9f1fb;
+    border-radius: 10px;
+    max-width: 516px;
+    max-height: 136px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
