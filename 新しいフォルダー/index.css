@@ -379,3 +379,87 @@ header {
     align-items: center;
     justify-content: center;
 }
+.TC-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 860px;
+    width: 100%;
+    margin-top: 80px;
+}
+#item01 {
+    justify-content: flex-start;
+}
+#item02 {
+    justify-content: flex-end;
+}
+#item03 {
+    justify-content: flex-start;
+}
+/*forth-container*/
+.forth-container {
+    background: url(img/bg.gif)repeat;
+    animation: fall 100s infinite linear;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes fall {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -250vw 250vw; /* 让背景不断向下滚动 */
+    }
+}
+.FRC-top {
+    text-align: center;
+}
+.FRC-top h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 2px;
+}
+.FRC-messages-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+.FRC-messages-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin-top: 32px;
+}
+.FRC-message {
+    max-width: 410px;
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 20px;
+}
+.FRC-message h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.FRC-message h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.FRC-message p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-top: 30px;
+}
