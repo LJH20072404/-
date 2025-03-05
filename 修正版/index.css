@@ -156,7 +156,7 @@ body {
     color: #333;
     text-shadow: 2px 2px 5px #fff;
     text-align: left;
-    letter-spacing: 
+    letter-spacing: 1px;
 }
 .mainvisual-btn p {
     font-size: 24px;
@@ -167,6 +167,14 @@ body {
     color: #fff;
     border-radius: 10px;
     text-shadow: none;
+    box-shadow: 0px 5px 1px #7A051C;
+    transition: all 0.3s ease-in-out;
+    margin-top: 40px;
+}
+.mainvisual-btn p:hover {
+    transform: scale(1.05);/*稍微变大*/
+    opacity: 0.8;/*变为半透明.0-1是由透明到不透明*/
+    transition: all 0.3s ease-in-out;
 }
 /*mainvisual-swiper*/
 .swiper {
@@ -198,3 +206,69 @@ body {
     box-shadow: inset 0px 0px 30px 30px #fff;/*数字调节的范围 左右 上下 阴影厚度 阴影宽度*/
     content: " ";
 }
+/*first-container*/
+.first-container {
+    max-width: 100vw;
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-header {
+    text-align: center;
+}
+.container-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+}
+/*FC-messages*/
+.FC-messages {
+    background-color: #ff2a2a;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 80px;
+    max-width: 100vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.FC-message-top {
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 70px 161px 70px 162px;
+    align-self: flex-start;
+}
+.FC-message-bottom {
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 70px 152px 70px 152px;
+    align-self: flex-end;
+}
+.FC-message h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff2a2a;
+    line-height: 1.5;
+}
+.FC-message-top img {
+    max-width: 87px;
+}
+.FC-message-bottom img {
+    max-width: 51px;
+}
+/*second-container*/
