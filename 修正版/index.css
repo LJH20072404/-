@@ -323,3 +323,107 @@ body {
 .SC-messages-bottom {
     align-self: flex-start;
 }
+/*third-container*/
+.third-container {
+    margin-top: 120px;
+    background: url(img/bg.gif);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    animation: fall 100s infinite linear;
+}
+@keyframes fall {
+    from {
+        background-position: 0 0;/*此处为上下对应！from-to 前后两个数字分别代表X轴Y轴*/
+    }
+    to {
+        background-position: 700vw 700vw;/*X轴0~700 Y轴0~700*/
+    }
+}
+.TC-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+.TC-messages-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.TC-text {
+    max-width: 410px;
+    text-align: center;
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 15px;
+}
+.TC-text p {
+    text-align: left;
+    max-width: 290px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+}
+.TC-text h3 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+}
+.TC-text h4 {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.TC-messages-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+/*main-footer*/
+.main-footer {
+    margin: 120px auto 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-footer h2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+}
+.main-footer h3 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+}
+.main-footer button {
+    background-color: #ff2a2a;
+    color: #fff;
+    padding: 12px 293px;
+    border-radius: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    margin-top: 55px;
+    border: #ff2a2a 3px solid;
+    transition: all 0.3s ease-in-out;
+}
+.main-footer button:hover {
+    background-color: #fff;
+    color: #ff2a2a;
+    transition: all 0.3s ease-in-out;
+}
