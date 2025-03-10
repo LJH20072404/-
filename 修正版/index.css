@@ -29,10 +29,10 @@ body {
     transition: all 0.3s ease-in-out;
 }
 .menu-btn span:before {
-    bottom: 20px;/*白线间隔*/
+    bottom: 15px;/*白线间隔*/
 }
 .menu-btn span:after {
-    top: 20px;/*白线间隔*/
+    top: 15px;/*白线间隔*/
 }
 #menu-btn-check:checked ~ .menu-btn span {
     background-color: rgba(255, 255, 255, 0);/*中间一条变成透明*/
@@ -426,4 +426,158 @@ body {
     background-color: #fff;
     color: #ff2a2a;
     transition: all 0.3s ease-in-out;
+}
+/*footer*/
+footer {
+    background-color: #e8e8e8;
+    max-width: 100vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-top {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 60vw;
+    width: 100%;
+    gap: 40px;
+}
+footer p {
+    font-size: 10px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.footer-message {
+    max-width: 162px;
+    width: 100%;
+}
+.footer-message h4 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    color: #333;
+}
+.footer-message ul {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    margin-left: 10px;
+}
+.student-word img:nth-of-type(2) {
+    display: none;
+}
+.message-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.message-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+@media screen and (max-width: 900px) {
+    .menu-btn {
+        width: 80px;
+        height: 80px;
+    }
+    .swiper {
+        width: 100vw;
+        transform: translateX(0);
+    }
+    .mainvisual {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainvisual-message {
+        position: unset;
+    }
+    #item01 {
+        order: 2;
+    }
+    #item02 {
+        order: 1;
+    }
+    .mainvisual-message p {
+        font-size: 28px;
+    }
+    .mainvisual-btn {
+        width: 90vw;
+        text-align: center;
+    }
+    .mainvisual-btn p {
+        text-align: center;
+    }
+    .student-word img:nth-of-type(2) {
+        display: block;
+        transform: translateY(10%);
+    }
+    .student-word img:nth-of-type(1) {
+        display: none;
+    }
+    .SC-message {
+        display: flex;
+        flex-direction: column;
+    }
+    #item-up {
+        order: 2;
+    }
+    #item-down {
+        order: 1;
+    }
+    .student-word {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100vw;
+    }
+    .student-word p {
+        max-width: 100vw;
+    }
+    .TC-messages-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .TC-messages-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-footer {
+        text-align: center;
+    }
+    .main-footer h2 {
+        font-size: 24px;
+    }
+    .main-footer h3 {
+        font-size: 16px;
+    }
+    .main-footer button {
+        padding: 15px 14.3%;
+    }
+    .message-top {
+        display: flex;
+        justify-content: space-between;
+    }
+    .message-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-message {
+        max-width: 50vw;
+        width: 100%;
+    }
 }
