@@ -1,0 +1,52 @@
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*first-page-top*/
+header {
+    position: relative;
+}
+.background-top {
+    position: relative;
+    z-index: -1000;
+    top: 0;
+}
+/**/
+.top-message-photo {
+    position: absolute;
+    z-index: -500;
+    top: 0;
+}
+.top-messages h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 0.729;
+    color: rgba(72, 0, 0, 1);
+}
+.top-messages p {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1.75;
+    color: rgba(240, 131, 0, 1);
+    margin-top: 18px;
+}
+.top-messages p::before,
+.top-messages p::after {
+    content: "";
+    display: inline-block;
+    width: 16px; /* 调整大小 */
+    height: 16px;
+    background: url('img/main用/star.png') no-repeat center center;
+    background-size: contain;
+    margin: 0 5px;
+}
+.top-message-photo img {
+    max-width: 179px;
+    width: 100%;
+    transform: translateY(20%);
+}
+.top-message-photo {
+    margin-top: 158px;
+    margin-left: 214px;
+    display: flex;
+}
